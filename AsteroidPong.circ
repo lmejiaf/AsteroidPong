@@ -968,28 +968,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(320,210)" to="(380,210)"/>
-    <wire from="(350,200)" to="(350,300)"/>
     <wire from="(410,210)" to="(470,210)"/>
-    <wire from="(320,200)" to="(350,200)"/>
     <wire from="(470,290)" to="(580,290)"/>
     <wire from="(470,210)" to="(470,290)"/>
     <wire from="(300,220)" to="(300,250)"/>
     <wire from="(350,300)" to="(580,300)"/>
-    <comp lib="5" loc="(610,150)" name="DotMatrix">
-      <a name="inputtype" val="row"/>
-      <a name="matrixcols" val="32"/>
-      <a name="matrixrows" val="32"/>
-    </comp>
-    <comp loc="(610,460)" name="Player"/>
-    <comp lib="0" loc="(300,250)" name="Pin">
+    <wire from="(350,200)" to="(350,300)"/>
+    <wire from="(320,200)" to="(350,200)"/>
+    <comp lib="0" loc="(300,250)" name="Clock">
       <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="4" loc="(320,200)" name="Counter">
       <a name="width" val="5"/>
       <a name="max" val="0x1f"/>
     </comp>
-    <comp loc="(610,150)" name="WorldProcess"/>
     <comp loc="(410,210)" name="RandomSystem"/>
   </circuit>
 </project>
