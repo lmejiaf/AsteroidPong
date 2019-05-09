@@ -88,7 +88,6 @@
     <wire from="(240,510)" to="(280,510)"/>
     <wire from="(410,520)" to="(410,620)"/>
     <wire from="(540,300)" to="(690,300)"/>
-    <wire from="(310,480)" to="(660,480)"/>
     <wire from="(710,410)" to="(740,410)"/>
     <wire from="(710,430)" to="(740,430)"/>
     <wire from="(710,450)" to="(740,450)"/>
@@ -101,6 +100,7 @@
     <wire from="(660,660)" to="(690,660)"/>
     <wire from="(710,570)" to="(740,570)"/>
     <wire from="(710,490)" to="(740,490)"/>
+    <wire from="(360,450)" to="(380,450)"/>
     <wire from="(710,510)" to="(740,510)"/>
     <wire from="(710,610)" to="(740,610)"/>
     <wire from="(710,630)" to="(740,630)"/>
@@ -112,14 +112,17 @@
     <wire from="(240,440)" to="(240,510)"/>
     <wire from="(420,530)" to="(540,530)"/>
     <wire from="(270,580)" to="(270,590)"/>
+    <wire from="(310,440)" to="(310,450)"/>
+    <wire from="(380,450)" to="(380,480)"/>
     <wire from="(690,300)" to="(690,320)"/>
+    <wire from="(710,400)" to="(740,400)"/>
     <wire from="(710,440)" to="(740,440)"/>
     <wire from="(710,420)" to="(740,420)"/>
     <wire from="(710,460)" to="(740,460)"/>
     <wire from="(710,480)" to="(740,480)"/>
     <wire from="(710,380)" to="(740,380)"/>
-    <wire from="(710,400)" to="(740,400)"/>
     <wire from="(710,340)" to="(740,340)"/>
+    <wire from="(310,450)" to="(330,450)"/>
     <wire from="(710,360)" to="(740,360)"/>
     <wire from="(710,580)" to="(740,580)"/>
     <wire from="(710,600)" to="(740,600)"/>
@@ -129,8 +132,8 @@
     <wire from="(710,640)" to="(740,640)"/>
     <wire from="(710,560)" to="(740,560)"/>
     <wire from="(710,540)" to="(740,540)"/>
-    <wire from="(310,440)" to="(310,480)"/>
     <wire from="(540,300)" to="(540,530)"/>
+    <wire from="(380,480)" to="(660,480)"/>
     <wire from="(290,520)" to="(290,580)"/>
     <wire from="(240,440)" to="(310,440)"/>
     <comp loc="(710,330)" name="WorldProcess"/>
@@ -145,6 +148,7 @@
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="5" loc="(280,510)" name="Keyboard"/>
+    <comp loc="(360,450)" name="ReductorDeFrecuencia"/>
     <comp lib="0" loc="(300,590)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
@@ -1005,6 +1009,55 @@
       <a name="width" val="32"/>
       <a name="label" val="F12"/>
       <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  <circuit name="ReductorDeFrecuencia">
+    <a name="circuit" val="ReductorDeFrecuencia"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(440,210)" to="(500,210)"/>
+    <wire from="(440,130)" to="(500,130)"/>
+    <wire from="(420,160)" to="(420,170)"/>
+    <wire from="(350,160)" to="(350,170)"/>
+    <wire from="(440,180)" to="(440,210)"/>
+    <wire from="(440,130)" to="(440,160)"/>
+    <wire from="(280,180)" to="(280,210)"/>
+    <wire from="(280,130)" to="(280,160)"/>
+    <wire from="(360,130)" to="(360,160)"/>
+    <wire from="(360,180)" to="(360,210)"/>
+    <wire from="(240,210)" to="(280,210)"/>
+    <wire from="(240,130)" to="(280,130)"/>
+    <wire from="(420,170)" to="(450,170)"/>
+    <wire from="(490,160)" to="(520,160)"/>
+    <wire from="(270,170)" to="(290,170)"/>
+    <wire from="(330,160)" to="(350,160)"/>
+    <wire from="(350,170)" to="(370,170)"/>
+    <wire from="(440,180)" to="(450,180)"/>
+    <wire from="(440,160)" to="(450,160)"/>
+    <wire from="(410,160)" to="(420,160)"/>
+    <wire from="(280,180)" to="(290,180)"/>
+    <wire from="(280,160)" to="(290,160)"/>
+    <wire from="(360,160)" to="(370,160)"/>
+    <wire from="(360,180)" to="(370,180)"/>
+    <wire from="(280,210)" to="(360,210)"/>
+    <wire from="(280,130)" to="(360,130)"/>
+    <wire from="(360,130)" to="(440,130)"/>
+    <wire from="(360,210)" to="(440,210)"/>
+    <comp lib="4" loc="(330,160)" name="J-K Flip-Flop"/>
+    <comp lib="4" loc="(410,160)" name="J-K Flip-Flop"/>
+    <comp lib="0" loc="(520,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Clock salida"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(240,210)" name="Constant"/>
+    <comp lib="4" loc="(490,160)" name="J-K Flip-Flop"/>
+    <comp lib="0" loc="(240,130)" name="Constant"/>
+    <comp lib="0" loc="(270,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Clock Entrada"/>
     </comp>
   </circuit>
 </project>
